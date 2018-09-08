@@ -1,2 +1,2 @@
 # SpeechAI
-My Ttest/Learning Application for speech BOT
+My Test/Learning Application for speech BOT
