@@ -17,6 +17,7 @@ namespace SpeechBOT
     {
         SpeechSynthesizer SPKE = new SpeechSynthesizer();
         Choices list = new Choices();
+        bool IsListening = false;
 
 
         public frmSpeechBOT()
@@ -32,10 +33,10 @@ namespace SpeechBOT
         private void TalkToMe()
         {
             SpeechRecognitionEngine SRE = new SpeechRecognitionEngine();
-            list.Add(new string[] {"hello",
+            list.Add(new string[] {"hello", "listen",
                                     "how are you",
                                     "nice to meet you",
-                                    "what is the time", "can you tell me the date", "please sleep" });
+                                    "what is the time", "can you tell me the date", "go away", "please shut down", "sleep" });
 
             Grammar gr = new Grammar(new GrammarBuilder(list));
 
@@ -56,34 +57,52 @@ namespace SpeechBOT
         {
             string str = e.Result.Text;
 
-            if (str == "hello")
+            if (str == "listen")
             {
-                ReplyToMe("Hi!");
+                IsListening = true;
+                ReplyToMe("Hi! how can I help you?");
             }
-            else if (str == "how are you")
+            if(str == "please shut down")
             {
-                ReplyToMe("Awesome!, how about you?");
-            }
-            else if (str == "nice to meet you")
-            {
-                ReplyToMe("Glad to be here for you!");
-            }
-            else if (str == "what is the time")
-            {
-                ReplyToMe("The time is " + System.DateTime.Now.ToString("h:mm tt"));
-            }
-            else if (str == "can you tell me the date")
-            {
-                ReplyToMe("The date is " + System.DateTime.Now.ToString("M/d/yyyy"));
-            }
-            else if (str == "please sleep")
-            {
+                IsListening = false;
                 ReplyToMe("OK!, Catch you later!");
                 Application.Exit();
+                System.Environment.Exit(0);
             }
-            else
+
+            if (IsListening) 
             {
-                return;
+                
+
+                if (str == "hello")
+                {
+                    //ReplyToMe("Hi!");
+                }
+                else if (str == "how are you")
+                {
+                    ReplyToMe("Awesome!, how about you?");
+                }
+                else if (str == "nice to meet you")
+                {
+                    ReplyToMe("Glad to be here for you!");
+                }
+                else if (str == "what is the time")
+                {
+                    ReplyToMe("The time is " + System.DateTime.Now.ToString("h:mm tt"));
+                }
+                else if (str == "can you tell me the date")
+                {
+                    ReplyToMe("The date is " + System.DateTime.Now.ToString("M/d/yyyy"));
+                }
+                else if (str == "sleep")
+                {
+                    ReplyToMe("OK!, Sleeping now!");
+                    IsListening = false;
+                }
+                else
+                {
+                    return;
+                }
             }
 
         }
@@ -96,7 +115,7 @@ namespace SpeechBOT
         private void IntroduceTheBOT()
         {
             SPKE.SelectVoiceByHints((VoiceGender.Female));
-            SPKE.Speak("Hello, I am your assistant. How are you today?");
+            //SPKE.Speak("Hello, I am your assistant. How are you today?");
         }
 
         private void label1_Click(object sender, EventArgs e)
