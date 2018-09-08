@@ -1,0 +1,9 @@
+D:\DEVELOPMENT\Visual_C\SpeechBOT\SpeechBOT\bin\Debug\SpeechBOT.exe.config
+D:\DEVELOPMENT\Visual_C\SpeechBOT\SpeechBOT\bin\Debug\SpeechBOT.exe
+D:\DEVELOPMENT\Visual_C\SpeechBOT\SpeechBOT\bin\Debug\SpeechBOT.pdb
+D:\DEVELOPMENT\Visual_C\SpeechBOT\SpeechBOT\obj\Debug\SpeechBOT.csprojResolveAssemblyReference.cache
+D:\DEVELOPMENT\Visual_C\SpeechBOT\SpeechBOT\obj\Debug\SpeechBOT.frmSpeechBOT.resources
+D:\DEVELOPMENT\Visual_C\SpeechBOT\SpeechBOT\obj\Debug\SpeechBOT.Properties.Resources.resources
+D:\DEVELOPMENT\Visual_C\SpeechBOT\SpeechBOT\obj\Debug\SpeechBOT.csproj.GenerateResource.Cache
+D:\DEVELOPMENT\Visual_C\SpeechBOT\SpeechBOT\obj\Debug\SpeechBOT.exe
+D:\DEVELOPMENT\Visual_C\SpeechBOT\SpeechBOT\obj\Debug\SpeechBOT.pdb
