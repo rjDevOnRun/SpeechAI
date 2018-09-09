@@ -1,0 +1,11 @@
+﻿Nor|F|hello|hi
+Nor|F|how are you|Awesome!, how about you?
+Nor|F|how old are you|As old as you are.
+Nor|F|what are you doing|talking to you!
+Nor|F|where are you|Always near you!
+Pro|T|open inet|"chrome", "http://www.google.co.in"
+Nor|F|nice to meet you|Glad to be here for you!
+Wea|F|how is the weather|Let me get a look outside the window!
+Tim|F|what is the time|"The time is " + System.DateTime.Now.ToString("h:mm tt")
+Dat|F|what is the date|"The date is " + System.DateTime.Now.ToString("M/d/yyyy")
+Nor|F|sleep mode|"OK!, going to Sleep now!"
